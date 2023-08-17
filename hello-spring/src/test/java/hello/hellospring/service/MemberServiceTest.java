@@ -6,6 +6,7 @@ import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.springframework.test.annotation.Commit;
 
 import static org.assertj.core.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.*;
@@ -31,6 +32,7 @@ class MemberServiceTest {
     public void afterEach(){
         memberRepository.clearStore();
     }
+
 
     @Test
     void 회원가입() {   // 한글써도 상관없음
