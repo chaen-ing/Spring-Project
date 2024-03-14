@@ -9,9 +9,14 @@ import hello.core.member.MemberServiceImpl;
 import hello.core.member.MemoryMemberRepository;
 import hello.core.order.OrderService;
 import hello.core.order.OrderServiceImpl;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
+@Configuration
 public class AppConfig {
+
     // memberService 역할
+    @Bean
     public MemberService memberService(){
         // 기존에는 MemberServiceImpl 클래스에서 직접 구현체를 넣어줬음
         return new MemberServiceImpl(memberRepository());
@@ -19,16 +24,19 @@ public class AppConfig {
 
     // MemberRepository 역할 : MemoryMemberRepository 리턴
     // 만약 추후에 DbMemberRepository로 변경한다면 이부분만 변경해주면됨
-    private MemberRepository memberRepository(){
+    @Bean
+    public MemberRepository memberRepository(){
         return new MemoryMemberRepository();
     }
 
     // OrderService 역할
+    @Bean
     public OrderService orderService(){
         return new OrderServiceImpl(memberRepository(), discountPolicy());
     }
 
     // DiscountPolicy 역할 : FixDiscountPolicy 리턴
+    @Bean
     public DiscountPolicy discountPolicy(){
         // return new FixDiscountPolicy();
         // 정액 -> 정률으로 할인 정책 변경
