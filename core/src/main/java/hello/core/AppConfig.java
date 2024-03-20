@@ -18,6 +18,7 @@ public class AppConfig {
     // memberService 역할
     @Bean
     public MemberService memberService(){
+        System.out.println("call AppConfig.memberService");
         // 기존에는 MemberServiceImpl 클래스에서 직접 구현체를 넣어줬음
         return new MemberServiceImpl(memberRepository());
     }
@@ -26,12 +27,14 @@ public class AppConfig {
     // 만약 추후에 DbMemberRepository로 변경한다면 이부분만 변경해주면됨
     @Bean
     public MemberRepository memberRepository(){
+        System.out.println("call AppConfig.memberRepository");
         return new MemoryMemberRepository();
     }
 
     // OrderService 역할
     @Bean
     public OrderService orderService(){
+        System.out.println("call AppConfig.orderService");
         return new OrderServiceImpl(memberRepository(), discountPolicy());
     }
 
