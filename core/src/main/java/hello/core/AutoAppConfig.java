@@ -1,7 +1,11 @@
 package hello.core;
 
+import hello.core.discount.DiscountPolicy;
 import hello.core.member.MemberRepository;
 import hello.core.member.MemoryMemberRepository;
+import hello.core.order.OrderService;
+import hello.core.order.OrderServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -9,16 +13,12 @@ import org.springframework.context.annotation.FilterType;
 
 @Configuration
 @ComponentScan(
-        // member패키지 하위 패키지 탐색
-        basePackages = "hello.core.member",
-        // 설정 정보는 컴포넌트 스캔 대상에서 제외
         excludeFilters = @ComponentScan.Filter(type = FilterType.ANNOTATION, classes = Configuration.class)
 )
 public class AutoAppConfig {
-    /*
     @Bean(name = "memoryMemberRepository")
     public MemberRepository memberRepository() {
         return new MemoryMemberRepository();
     }
-    */
+
 }
