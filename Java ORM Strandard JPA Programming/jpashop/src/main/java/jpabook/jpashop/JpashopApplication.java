@@ -4,6 +4,8 @@ import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.EntityTransaction;
 import jakarta.persistence.Persistence;
+import jpabook.jpashop.domain.Order;
+import jpabook.jpashop.domain.OrderItem;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -20,6 +22,9 @@ public class JpashopApplication {
         tx.begin();
 
         try{
+            Order order = new Order();
+            order.addOrderItem(new OrderItem());
+
             tx.commit();
         } catch (Exception e){
             tx.rollback();
