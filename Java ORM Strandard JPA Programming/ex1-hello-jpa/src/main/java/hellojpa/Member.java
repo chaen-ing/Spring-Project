@@ -2,7 +2,9 @@ package hellojpa;
 
 import jakarta.persistence.*;
 import java.time.*;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 public class Member {
@@ -15,12 +17,13 @@ public class Member {
     @Column (name = "USERNAME")
     private String name;
 
-//    @Column(name = "TEAM_ID")
-//    private Long teamId;
+    @OneToOne
+    @JoinColumn(name="LOCKER_ID")
+    private Locker locker;
 
-    @ManyToOne
-    @JoinColumn(name = "TEAM_ID")
-    private Team team;
+    @OneToMany
+    private List<MemberProduct> memberProducts = new ArrayList<>();
+
 
     public Member(){
 
@@ -42,16 +45,5 @@ public class Member {
         this.name = name;
     }
 
-    public Team getTeam() {
-        return team;
-    }
 
-    public void setTeam(Team team) {
-        this.team = team;
-    }
-
-    public void changeTeam(Team team) {
-        this.team = team;
-        team.getMembers().add(this);
-    }
 }
