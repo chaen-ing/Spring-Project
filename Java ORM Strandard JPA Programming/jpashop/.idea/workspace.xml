@@ -5,16 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c33f85ef-ebdb-471a-8fcd-c349c51057da" name="Changes" comment="실전 예제 2 - 연관관계 매핑 시작">
-      <change afterPath="$PROJECT_DIR$/../ex1-hello-jpa/src/main/java/hellojpa/Locker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ex1-hello-jpa/src/main/java/hellojpa/MemberProduct.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ex1-hello-jpa/src/main/java/hellojpa/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex1-hello-jpa/src/main/java/hellojpa/JpaMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex1-hello-jpa/src/main/java/hellojpa/JpaMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex1-hello-jpa/src/main/java/hellojpa/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex1-hello-jpa/src/main/java/hellojpa/Member.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex1-hello-jpa/src/main/java/hellojpa/Team.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex1-hello-jpa/src/main/java/hellojpa/Team.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex1-hello-jpa/target/classes/hellojpa/JpaMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ex1-hello-jpa/target/classes/hellojpa/JpaMain.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex1-hello-jpa/target/classes/hellojpa/Member.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ex1-hello-jpa/target/classes/hellojpa/Member.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex1-hello-jpa/target/classes/hellojpa/Team.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ex1-hello-jpa/target/classes/hellojpa/Team.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/jpabook/jpashop/domain/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/jpabook/jpashop/domain/Delivery.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/jpabook/jpashop/domain/DeliveryStatus.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpabook/jpashop/domain/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpabook/jpashop/domain/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpabook/jpashop/domain/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpabook/jpashop/domain/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpabook/jpashop/domain/OrderItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpabook/jpashop/domain/OrderItem.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,8 +26,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -112,6 +109,7 @@
       <workItem from="1716895520877" duration="1164000" />
       <workItem from="1716979475867" duration="4000" />
       <workItem from="1717004271130" duration="2000" />
+      <workItem from="1717004320289" duration="867000" />
     </task>
     <task id="LOCAL-00001" summary="실전 예제 1 - 요구사항 분석과 기본 매핑">
       <option name="closed" value="true" />
