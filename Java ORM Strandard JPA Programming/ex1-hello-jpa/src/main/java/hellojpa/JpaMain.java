@@ -2,6 +2,7 @@ package hellojpa;
 
 import jakarta.persistence.*;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 public class JpaMain {
@@ -16,16 +17,13 @@ public class JpaMain {
 
         try{
             Member member = new Member();
-            member.setName("member1");
+            member.setCreatedBy("Kim");
+            member.setCreadtedDate(LocalDateTime.now());
 
             em.persist(member);
 
-            Team team = new Team();
-            team.setName("temaA");
-            //
-            team.getMembers().add(member);
-
-            em.persist(team);
+            em.flush();
+            em.clear();
 
             tx.commit();
         } catch (Exception e){
