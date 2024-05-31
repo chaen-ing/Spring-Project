@@ -1,9 +1,7 @@
 package hellojpa;
 
 import jakarta.persistence.*;
-
 import java.time.LocalDateTime;
-import java.util.List;
 
 public class JpaMain {
 
@@ -21,6 +19,11 @@ public class JpaMain {
             member.setCreadtedDate(LocalDateTime.now());
 
             em.persist(member);
+
+            Book book = new Book();
+            book.setName("JPA");
+
+            em.persist(book);
 
             em.flush();
             em.clear();

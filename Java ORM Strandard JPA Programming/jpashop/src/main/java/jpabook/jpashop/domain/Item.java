@@ -9,9 +9,11 @@ import java.util.List;
 
 @Getter @Setter
 @Entity
-public class Item {
-
-    @Id @GeneratedValue
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn
+public abstract class Item extends BaseEntity{
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "ITEM_ID")
     private Long id;
 
@@ -23,5 +25,4 @@ public class Item {
 
     @ManyToMany(mappedBy = "items")
     private List<Category> categories = new ArrayList<>();
-
 }
