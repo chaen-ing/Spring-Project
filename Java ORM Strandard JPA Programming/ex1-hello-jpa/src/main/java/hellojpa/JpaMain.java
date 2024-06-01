@@ -1,7 +1,9 @@
 package hellojpa;
 
 import jakarta.persistence.*;
-import java.time.LocalDateTime;
+import org.hibernate.Hibernate;
+
+import java.util.List;
 
 public class JpaMain {
 
@@ -14,27 +16,43 @@ public class JpaMain {
         tx.begin();
 
         try{
-            Member member = new Member();
-            member.setCreatedBy("Kim");
-            member.setCreadtedDate(LocalDateTime.now());
+            Child child1 = new Child();
+            Child child2 = new Child();
 
-            em.persist(member);
+            Parent parent = new Parent();
+            parent.addChild(child1);
+            parent.addChild(child2);
 
-            Book book = new Book();
-            book.setName("JPA");
-
-            em.persist(book);
+            em.persist(parent);
 
             em.flush();
             em.clear();
 
+            Parent findParent = em.find(Parent.class, parent.getId());
+            findParent.getChildList().remove(0);
+
             tx.commit();
         } catch (Exception e){
             tx.rollback();
+            e.printStackTrace();
         } finally {
             em.close();
         }
 
         emf.close();
     }
+
+    private static void printMemberAndTeam(Member member){
+        String name = member.getName();
+        System.out.println("name = " + name);
+
+        Team team = member.getTeam();
+        System.out.println("team = " + team);
+    }
+
+    private static void printMember(Member member){
+        System.out.println("member = " + member);
+    }
+
+
 }
