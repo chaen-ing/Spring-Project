@@ -16,20 +16,33 @@ public class JpaMain {
         tx.begin();
 
         try{
-            Child child1 = new Child();
-            Child child2 = new Child();
+            Member member = new Member();
+            member.setName("member1");
+            member.setHomeAddress(new Address("city1","street","10000"));
 
-            Parent parent = new Parent();
-            parent.addChild(child1);
-            parent.addChild(child2);
+            member.getFavoriteFoods().add("치킨");
+            member.getFavoriteFoods().add("족발");
+            member.getFavoriteFoods().add("피자");
 
-            em.persist(parent);
+            member.getAddressHistory().add(new AddressEntity("old1","street","10000"));
+            member.getAddressHistory().add(new AddressEntity("old2","street","10000"));
+
+            em.persist(member);
 
             em.flush();
             em.clear();
 
-            Parent findParent = em.find(Parent.class, parent.getId());
-            findParent.getChildList().remove(0);
+            System.out.println("=====================");
+            Member findMember = em.find(Member.class, member.getId());
+
+            Address a = findMember.getHomeAddress();
+            findMember.setHomeAddress(new Address("newCity",a.getStreet(),a.getZipcode()));
+
+            // 치킨 -> 한식
+//            findMember.getFavoriteFoods().remove("치킨");
+//            findMember.getFavoriteFoods().add("한식");
+
+            // 주소 변경
 
             tx.commit();
         } catch (Exception e){
@@ -42,17 +55,7 @@ public class JpaMain {
         emf.close();
     }
 
-    private static void printMemberAndTeam(Member member){
-        String name = member.getName();
-        System.out.println("name = " + name);
 
-        Team team = member.getTeam();
-        System.out.println("team = " + team);
-    }
-
-    private static void printMember(Member member){
-        System.out.println("member = " + member);
-    }
 
 
 }
