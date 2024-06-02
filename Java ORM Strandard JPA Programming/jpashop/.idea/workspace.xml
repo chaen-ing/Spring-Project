@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c33f85ef-ebdb-471a-8fcd-c349c51057da" name="Changes" comment="실전 예제 5 - 연관관계 관리" />
+    <list default="true" id="c33f85ef-ebdb-471a-8fcd-c349c51057da" name="Changes" comment="실전 예제 5 - 연관관계 관리">
+      <change afterPath="$PROJECT_DIR$/src/main/java/jpabook/jpashop/domain/Address.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpabook/jpashop/domain/Delivery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpabook/jpashop/domain/Delivery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpabook/jpashop/domain/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpabook/jpashop/domain/Member.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,8 +24,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -160,6 +165,7 @@
       <workItem from="1717143473093" duration="13000" />
       <workItem from="1717233240489" duration="32000" />
       <workItem from="1717233290193" duration="818000" />
+      <workItem from="1717339117622" duration="891000" />
     </task>
     <task id="LOCAL-00001" summary="실전 예제 1 - 요구사항 분석과 기본 매핑">
       <option name="closed" value="true" />
