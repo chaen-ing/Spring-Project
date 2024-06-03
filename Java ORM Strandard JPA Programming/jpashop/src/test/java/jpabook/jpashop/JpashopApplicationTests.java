@@ -1,9 +1,8 @@
 package jpabook.jpashop;
 
-import jpabook.jpashop.domain.Book;
-import jpabook.jpashop.domain.Delivery;
-import jpabook.jpashop.domain.Order;
-import jpabook.jpashop.domain.OrderItem;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityTransaction;
+import jpabook.jpashop.domain.*;
 import jpabook.jpashop.repository.OrderItemRepository;
 import jpabook.jpashop.repository.ItemRepository;
 import jpabook.jpashop.repository.OrderRepository;
@@ -19,6 +18,9 @@ class JpashopApplicationTests {
     OrderRepository orderRepository;
     @Autowired
     OrderItemRepository orderItemRepository;
+
+    @Autowired
+    EntityManager em;
 
     @Test
     void jpaSaveItem(){
@@ -40,6 +42,15 @@ class JpashopApplicationTests {
         order.addOrderItem(orderItem2);
 
         orderRepository.save(order);
+
+    }
+
+    @Test
+    void emTest(){
+        Member member = new Member();
+        member.setName("kim");
+
+        em.persist(member);
 
     }
 

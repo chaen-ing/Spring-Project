@@ -4,11 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c33f85ef-ebdb-471a-8fcd-c349c51057da" name="Changes" comment="실전 예제 5 - 연관관계 관리">
-      <change afterPath="$PROJECT_DIR$/src/main/java/jpabook/jpashop/domain/Address.java" afterDir="false" />
+    <list default="true" id="c33f85ef-ebdb-471a-8fcd-c349c51057da" name="Changes" comment="실전 예제 6 - 값 타입 매핑">
+      <change afterPath="$PROJECT_DIR$/../jpql/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jpql/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jpql/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jpql/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jpql/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jpql/src/main/java/hellojpa/jpql/Repository/MemberRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jpql/src/main/java/hellojpa/jpql/jpql/Member.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jpql/src/main/java/hellojpa/jpql/jpql/Team.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex1-hello-jpa/src/main/java/hellojpa/JpaMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex1-hello-jpa/src/main/java/hellojpa/JpaMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex1-hello-jpa/target/classes/hellojpa/JpaMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ex1-hello-jpa/target/classes/hellojpa/JpaMain.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jpabook/jpashop/domain/Delivery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpabook/jpashop/domain/Delivery.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jpabook/jpashop/domain/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpabook/jpashop/domain/Member.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/jpabook/jpashop/JpashopApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jpabook/jpashop/JpashopApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,6 +89,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="JpashopApplicationTests.emTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jpashop.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="jpabook.jpashop.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="jpabook.jpashop" />
+      <option name="MAIN_CLASS_NAME" value="jpabook.jpashop.JpashopApplicationTests" />
+      <option name="METHOD_NAME" value="emTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="JpashopApplicationTests.jpaCascadeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jpashop.test" />
       <extension name="coverage">
@@ -139,6 +163,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.JpashopApplicationTests.jpaCascadeTest" />
+        <item itemvalue="JUnit.JpashopApplicationTests.emTest" />
         <item itemvalue="JUnit.JpashopApplicationTests.jpaSaveItem" />
         <item itemvalue="JUnit.JpashopApplicationTests.jpaSave" />
         <item itemvalue="Application.JpaMain" />
@@ -165,7 +190,10 @@
       <workItem from="1717143473093" duration="13000" />
       <workItem from="1717233240489" duration="32000" />
       <workItem from="1717233290193" duration="818000" />
-      <workItem from="1717339117622" duration="891000" />
+      <workItem from="1717339117622" duration="989000" />
+      <workItem from="1717398351207" duration="281000" />
+      <workItem from="1717398957371" duration="783000" />
+      <workItem from="1717399812378" duration="9000" />
     </task>
     <task id="LOCAL-00001" summary="실전 예제 1 - 요구사항 분석과 기본 매핑">
       <option name="closed" value="true" />
@@ -207,7 +235,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717234104553</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="실전 예제 6 - 값 타입 매핑">
+      <option name="closed" value="true" />
+      <created>1717341926972</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1717341926972</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -230,6 +266,7 @@
     <MESSAGE value="실전 예제 3 - 다양한 연관관계 매핑" />
     <MESSAGE value="실전 예제 4 - 고급 매핑" />
     <MESSAGE value="실전 예제 5 - 연관관계 관리" />
-    <option name="LAST_COMMIT_MESSAGE" value="실전 예제 5 - 연관관계 관리" />
+    <MESSAGE value="실전 예제 6 - 값 타입 매핑" />
+    <option name="LAST_COMMIT_MESSAGE" value="실전 예제 6 - 값 타입 매핑" />
   </component>
 </project>
