@@ -6,16 +6,28 @@ import hellojpa.jpql.jpql.Member;
 import hellojpa.jpql.jpql.MemberDTO;
 import hellojpa.jpql.jpql.Team;
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
 import jakarta.persistence.Query;
 import jakarta.persistence.TypedQuery;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.transaction.TransactionDefinition;
+import org.springframework.transaction.TransactionStatus;
+import org.springframework.transaction.support.DefaultTransactionDefinition;
 
+import java.awt.print.Pageable;
 import java.util.List;
+import java.util.Optional;
 import java.util.Queue;
 
-@SpringBootTest
+
+@DataJpaTest
 class JpqlApplicationTests {
 
 	@Autowired
@@ -24,7 +36,22 @@ class JpqlApplicationTests {
 	TeamRepository teamRepository;
 
 	@Autowired
-	EntityManager em;
+	private PlatformTransactionManager transactionManager;
+
+	@PersistenceContext
+	private EntityManager em;
+
+	@BeforeEach
+	public void setUp(){
+		Team team = new Team();
+		team.setName("A");
+		teamRepository.save(team);
+
+		memberRepository.save(new Member("kim",10,team));
+		memberRepository.save(new Member("lee",1000,team));
+		memberRepository.save(new Member("park",60,team));
+		memberRepository.save(new Member("choi",30,team));
+	}
 
 	@Test
 	void saveTest() {
@@ -53,20 +80,8 @@ class JpqlApplicationTests {
 
 	@Test
 	void joinTest(){
-		Team team = new Team();
-		teamRepository.save(team);
 
-		Member membera = new Member();
-		membera.setUsername("kim");
-		membera.setTeam(team);
-		memberRepository.save(membera);
-
-		Member memberb = new Member();
-		memberb.setUsername("kim2");
-		memberb.setTeam(team);
-		memberRepository.save(memberb);
-
-		List<Member> teamMember = memberRepository.findTeamMember();
+		List<Member> teamMember = memberRepository.joinTeamMember();
 
 		for (Member member : teamMember) {
 			System.out.println("member = " + member.getUsername());
@@ -93,5 +108,7 @@ class JpqlApplicationTests {
 
 
 	}
+
+
 
 }
