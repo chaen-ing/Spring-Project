@@ -5,18 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c33f85ef-ebdb-471a-8fcd-c349c51057da" name="Changes" comment="실전 예제 6 - 값 타입 매핑">
-      <change afterPath="$PROJECT_DIR$/../jpql/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jpql/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jpql/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jpql/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jpql/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jpql/src/main/java/hellojpa/jpql/Repository/MemberRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jpql/src/main/java/hellojpa/jpql/jpql/Member.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jpql/src/main/java/hellojpa/jpql/jpql/Team.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex1-hello-jpa/src/main/java/hellojpa/JpaMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex1-hello-jpa/src/main/java/hellojpa/JpaMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex1-hello-jpa/target/classes/hellojpa/JpaMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ex1-hello-jpa/target/classes/hellojpa/JpaMain.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/jpabook/jpashop/JpashopApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jpabook/jpashop/JpashopApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpql/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../jpql/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,6 +184,11 @@
       <workItem from="1717398351207" duration="281000" />
       <workItem from="1717398957371" duration="783000" />
       <workItem from="1717399812378" duration="9000" />
+      <workItem from="1717654033547" duration="681000" />
+      <workItem from="1718086155641" duration="70000" />
+      <workItem from="1718441521343" duration="1073000" />
+      <workItem from="1718443186474" duration="46000" />
+      <workItem from="1720365242483" duration="40000" />
     </task>
     <task id="LOCAL-00001" summary="실전 예제 1 - 요구사항 분석과 기본 매핑">
       <option name="closed" value="true" />
