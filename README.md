@@ -9,6 +9,6 @@
 4. 자바 ORM 표준 JPA 프로그래밍
    https://www.inflearn.com/course/스프링-데이터-JPA-실전
 5. 스프링 MVC 1편 - 백엔드 웹 개발 핵심 기술
-    https://www.inflearn.com/course/스프링-mvc-1
+   https://www.inflearn.com/course/스프링-mvc-1
 6. 스프링 MVC 2편 - 백엔드 웹 개발 활용 기술
-    https://www.inflearn.com/course/스프링-mvc-2
+   https://www.inflearn.com/course/스프링-mvc-2
