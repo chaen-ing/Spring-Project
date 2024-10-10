@@ -66,45 +66,39 @@ public class BasicItemController {
 
 		model.addAttribute("item",item);
 
-		return "basic/addForm";
+		return "basic/item";
 	}
 
 
 	//@PostMapping("/add")
-	public String addItemV2(@ModelAttribute("item") Item item, Model model) {
+	public String addItemV2(@ModelAttribute("item") Item item) {
 		itemRepository.save(item);
 
 		// model.addAttribute("item",item);
 
-		return "basic/addForm";
+		return "basic/item";
 	}
 
 	// @PostMapping("/add")
-	public String addItemV3(@ModelAttribute Item item, Model model) {
+	public String addItemV3(@ModelAttribute Item item) {
 		// Item -> item으로 이름 변경해서 자동 저장
 
 		itemRepository.save(item);
-		return "basic/addForm";
+		return "basic/item";
 	}
 
-	@PostMapping("/add")
-	public String addItemV4(Item item, Model model) {
+	//@PostMapping("/add")
+	public String addItemV4(Item item) {
 		// @ModelAttribute도 생략
 		itemRepository.save(item);
-		return "basic/addForm";
+		return "basic/item";
 	}
 
-	@GetMapping("/{itemId}/edit")
-	public String editForm(@PathVariable(name="itemId") Long itemId, Model model){
-		Item item = itemRepository.findById(itemId);
-		model.addAttribute("item",item);
-		return "basic/editForm";
-	}
-
-	@PostMapping("/{itemId}/edit")
-	public String edit(@PathVariable(name="itemId") Long itemId, @ModelAttribute Item item){
-		itemRepository.update(itemId,item);
-		return "redirect:/basic/items/{itemId}";
+	// PRG - Post/Redirect/Get
+	@PostMapping("/add")
+	public String addItemV5(Item item) {
+		itemRepository.save(item);
+		return "redirect:/basic/items/" + item.getId();
 	}
 
 
